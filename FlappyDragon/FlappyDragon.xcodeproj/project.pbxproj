@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEBC30532B6508CE00D3028F /* Red_dragon.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CEBC30522B6508CE00D3028F /* Red_dragon.usdz */; };
 		CEBFFA072B64E0F3005A0ED8 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = CEBFFA062B64E0F3005A0ED8 /* RealityKitContent */; };
 		CEBFFA092B64E0F3005A0ED8 /* FlappyDragonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFFA082B64E0F3005A0ED8 /* FlappyDragonApp.swift */; };
 		CEBFFA0B2B64E0F3005A0ED8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFFA0A2B64E0F3005A0ED8 /* ContentView.swift */; };
@@ -15,6 +16,7 @@
 		CEBFFA112B64E0F5005A0ED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBFFA102B64E0F5005A0ED8 /* Assets.xcassets */; };
 		CEBFFA142B64E0F5005A0ED8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBFFA132B64E0F5005A0ED8 /* Preview Assets.xcassets */; };
 		CEBFFA1F2B64E0F5005A0ED8 /* FlappyDragonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFFA1E2B64E0F5005A0ED8 /* FlappyDragonTests.swift */; };
+		CEBFFA2A2B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CEBFFA292B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CEBC30522B6508CE00D3028F /* Red_dragon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Red_dragon.usdz; sourceTree = "<group>"; };
 		CEBFFA012B64E0F3005A0ED8 /* FlappyDragon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyDragon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBFFA052B64E0F3005A0ED8 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		CEBFFA082B64E0F3005A0ED8 /* FlappyDragonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyDragonApp.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		CEBFFA152B64E0F5005A0ED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEBFFA1A2B64E0F5005A0ED8 /* FlappyDragonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyDragonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBFFA1E2B64E0F5005A0ED8 /* FlappyDragonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyDragonTests.swift; sourceTree = "<group>"; };
+		CEBFFA292B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Low_Poly_Dragon.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 				CEBFFA0C2B64E0F3005A0ED8 /* ImmersiveView.swift */,
 				CEBFFA0E2B64E0F3005A0ED8 /* ImageBasedLighting.skybox */,
 				CEBFFA102B64E0F5005A0ED8 /* Assets.xcassets */,
+				CEBFFA282B64FBB5005A0ED8 /* Dragon */,
 				CEBFFA152B64E0F5005A0ED8 /* Info.plist */,
 				CEBFFA122B64E0F5005A0ED8 /* Preview Content */,
 			);
@@ -115,6 +120,15 @@
 				CEBFFA1E2B64E0F5005A0ED8 /* FlappyDragonTests.swift */,
 			);
 			path = FlappyDragonTests;
+			sourceTree = "<group>";
+		};
+		CEBFFA282B64FBB5005A0ED8 /* Dragon */ = {
+			isa = PBXGroup;
+			children = (
+				CEBC30522B6508CE00D3028F /* Red_dragon.usdz */,
+				CEBFFA292B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz */,
+			);
+			path = Dragon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +218,8 @@
 				CEBFFA112B64E0F5005A0ED8 /* Assets.xcassets in Resources */,
 				CEBFFA142B64E0F5005A0ED8 /* Preview Assets.xcassets in Resources */,
 				CEBFFA0F2B64E0F3005A0ED8 /* ImageBasedLighting.skybox in Resources */,
+				CEBFFA2A2B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz in Resources */,
+				CEBC30532B6508CE00D3028F /* Red_dragon.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

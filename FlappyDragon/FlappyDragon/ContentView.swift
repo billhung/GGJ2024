@@ -17,13 +17,23 @@ struct ContentView: View {
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-
+    
     var body: some View {
         RealityView { content in
             // Add the initial RealityKit content
             if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
                 content.add(scene)
             }
+            // Add the dragon upon app load
+            if let dragon = try? await Entity(named: "Low_Poly_Dragon"){
+                dragon.scale = [0.001,0.001,0.001]
+                content.add(dragon)
+                debugPrint("Low_Poly_Dragon added")
+            }
+//            if let dragon = try? await Entity(named: "Red_Dragon"){
+//                content.add(dragon)
+//                debugPrint("Red_Dragon added")
+//            }
         } update: { content in
             // Update the RealityKit content when SwiftUI state changes
             if let scene = content.entities.first {
@@ -61,6 +71,14 @@ struct ContentView: View {
             }
         }
     }
+   
+//    private func loadEntity() -> Entity? {
+        
+//        try? await Entity{
+//            named: "Scene",
+//            in:realityKitContentBundle
+//        }
+//    }
 }
 
 #Preview(windowStyle: .volumetric) {
