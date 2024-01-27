@@ -26,6 +26,7 @@ struct ContentView: View {
             }
             // Add the dragon upon app load
             if let dragon = try? await Entity(named: "Low_Poly_Dragon"){
+                dragon.scale = [0.001,0.001,0.001]
                 content.add(dragon)
                 debugPrint("Low_Poly_Dragon added")
             }
