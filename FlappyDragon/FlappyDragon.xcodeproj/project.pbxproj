@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEBFFA072B64E0F3005A0ED8 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = CEBFFA062B64E0F3005A0ED8 /* RealityKitContent */; };
+		CEBFFA092B64E0F3005A0ED8 /* FlappyDragonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFFA082B64E0F3005A0ED8 /* FlappyDragonApp.swift */; };
+		CEBFFA0B2B64E0F3005A0ED8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFFA0A2B64E0F3005A0ED8 /* ContentView.swift */; };
+		CEBFFA0D2B64E0F3005A0ED8 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFFA0C2B64E0F3005A0ED8 /* ImmersiveView.swift */; };
+		CEBFFA0F2B64E0F3005A0ED8 /* ImageBasedLighting.skybox in Resources */ = {isa = PBXBuildFile; fileRef = CEBFFA0E2B64E0F3005A0ED8 /* ImageBasedLighting.skybox */; };
+		CEBFFA112B64E0F5005A0ED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBFFA102B64E0F5005A0ED8 /* Assets.xcassets */; };
+		CEBFFA142B64E0F5005A0ED8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBFFA132B64E0F5005A0ED8 /* Preview Assets.xcassets */; };
+		CEBFFA1F2B64E0F5005A0ED8 /* FlappyDragonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFFA1E2B64E0F5005A0ED8 /* FlappyDragonTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEBFFA1B2B64E0F5005A0ED8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEBFF9F92B64E0F3005A0ED8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEBFFA002B64E0F3005A0ED8;
+			remoteInfo = FlappyDragon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEBFFA012B64E0F3005A0ED8 /* FlappyDragon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyDragon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBFFA052B64E0F3005A0ED8 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		CEBFFA082B64E0F3005A0ED8 /* FlappyDragonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyDragonApp.swift; sourceTree = "<group>"; };
+		CEBFFA0A2B64E0F3005A0ED8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEBFFA0C2B64E0F3005A0ED8 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		CEBFFA0E2B64E0F3005A0ED8 /* ImageBasedLighting.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = ImageBasedLighting.skybox; sourceTree = "<group>"; };
+		CEBFFA102B64E0F5005A0ED8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEBFFA132B64E0F5005A0ED8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEBFFA152B64E0F5005A0ED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEBFFA1A2B64E0F5005A0ED8 /* FlappyDragonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyDragonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBFFA1E2B64E0F5005A0ED8 /* FlappyDragonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyDragonTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEBFF9FE2B64E0F3005A0ED8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBFFA072B64E0F3005A0ED8 /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBFFA172B64E0F5005A0ED8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEBFF9F82B64E0F3005A0ED8 = {
+			isa = PBXGroup;
+			children = (
+				CEBFFA032B64E0F3005A0ED8 /* FlappyDragon */,
+				CEBFFA042B64E0F3005A0ED8 /* Packages */,
+				CEBFFA1D2B64E0F5005A0ED8 /* FlappyDragonTests */,
+				CEBFFA022B64E0F3005A0ED8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEBFFA022B64E0F3005A0ED8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEBFFA012B64E0F3005A0ED8 /* FlappyDragon.app */,
+				CEBFFA1A2B64E0F5005A0ED8 /* FlappyDragonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEBFFA032B64E0F3005A0ED8 /* FlappyDragon */ = {
+			isa = PBXGroup;
+			children = (
+				CEBFFA082B64E0F3005A0ED8 /* FlappyDragonApp.swift */,
+				CEBFFA0A2B64E0F3005A0ED8 /* ContentView.swift */,
+				CEBFFA0C2B64E0F3005A0ED8 /* ImmersiveView.swift */,
+				CEBFFA0E2B64E0F3005A0ED8 /* ImageBasedLighting.skybox */,
+				CEBFFA102B64E0F5005A0ED8 /* Assets.xcassets */,
+				CEBFFA152B64E0F5005A0ED8 /* Info.plist */,
+				CEBFFA122B64E0F5005A0ED8 /* Preview Content */,
+			);
+			path = FlappyDragon;
+			sourceTree = "<group>";
+		};
+		CEBFFA042B64E0F3005A0ED8 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				CEBFFA052B64E0F3005A0ED8 /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		CEBFFA122B64E0F5005A0ED8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CEBFFA132B64E0F5005A0ED8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEBFFA1D2B64E0F5005A0ED8 /* FlappyDragonTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEBFFA1E2B64E0F5005A0ED8 /* FlappyDragonTests.swift */,
+			);
+			path = FlappyDragonTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEBFFA002B64E0F3005A0ED8 /* FlappyDragon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEBFFA222B64E0F5005A0ED8 /* Build configuration list for PBXNativeTarget "FlappyDragon" */;
+			buildPhases = (
+				CEBFF9FD2B64E0F3005A0ED8 /* Sources */,
+				CEBFF9FE2B64E0F3005A0ED8 /* Frameworks */,
+				CEBFF9FF2B64E0F3005A0ED8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlappyDragon;
+			packageProductDependencies = (
+				CEBFFA062B64E0F3005A0ED8 /* RealityKitContent */,
+			);
+			productName = FlappyDragon;
+			productReference = CEBFFA012B64E0F3005A0ED8 /* FlappyDragon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEBFFA192B64E0F5005A0ED8 /* FlappyDragonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEBFFA252B64E0F5005A0ED8 /* Build configuration list for PBXNativeTarget "FlappyDragonTests" */;
+			buildPhases = (
+				CEBFFA162B64E0F5005A0ED8 /* Sources */,
+				CEBFFA172B64E0F5005A0ED8 /* Frameworks */,
+				CEBFFA182B64E0F5005A0ED8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEBFFA1C2B64E0F5005A0ED8 /* PBXTargetDependency */,
+			);
+			name = FlappyDragonTests;
+			productName = FlappyDragonTests;
+			productReference = CEBFFA1A2B64E0F5005A0ED8 /* FlappyDragonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEBFF9F92B64E0F3005A0ED8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					CEBFFA002B64E0F3005A0ED8 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					CEBFFA192B64E0F5005A0ED8 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = CEBFFA002B64E0F3005A0ED8;
+					};
+				};
+			};
+			buildConfigurationList = CEBFF9FC2B64E0F3005A0ED8 /* Build configuration list for PBXProject "FlappyDragon" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEBFF9F82B64E0F3005A0ED8;
+			productRefGroup = CEBFFA022B64E0F3005A0ED8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEBFFA002B64E0F3005A0ED8 /* FlappyDragon */,
+				CEBFFA192B64E0F5005A0ED8 /* FlappyDragonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEBFF9FF2B64E0F3005A0ED8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBFFA112B64E0F5005A0ED8 /* Assets.xcassets in Resources */,
+				CEBFFA142B64E0F5005A0ED8 /* Preview Assets.xcassets in Resources */,
+				CEBFFA0F2B64E0F3005A0ED8 /* ImageBasedLighting.skybox in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBFFA182B64E0F5005A0ED8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEBFF9FD2B64E0F3005A0ED8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBFFA0B2B64E0F3005A0ED8 /* ContentView.swift in Sources */,
+				CEBFFA092B64E0F3005A0ED8 /* FlappyDragonApp.swift in Sources */,
+				CEBFFA0D2B64E0F3005A0ED8 /* ImmersiveView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBFFA162B64E0F5005A0ED8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBFFA1F2B64E0F5005A0ED8 /* FlappyDragonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEBFFA1C2B64E0F5005A0ED8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEBFFA002B64E0F3005A0ED8 /* FlappyDragon */;
+			targetProxy = CEBFFA1B2B64E0F5005A0ED8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CEBFFA202B64E0F5005A0ED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		CEBFFA212B64E0F5005A0ED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		CEBFFA232B64E0F5005A0ED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FlappyDragon/Preview Content\"";
+				DEVELOPMENT_TEAM = T5R65K3M74;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HCJapan.FlappyDragon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		CEBFFA242B64E0F5005A0ED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FlappyDragon/Preview Content\"";
+				DEVELOPMENT_TEAM = T5R65K3M74;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HCJapan.FlappyDragon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+		CEBFFA262B64E0F5005A0ED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5R65K3M74;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HCJapan.FlappyDragonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlappyDragon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlappyDragon";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		CEBFFA272B64E0F5005A0ED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5R65K3M74;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HCJapan.FlappyDragonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlappyDragon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlappyDragon";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEBFF9FC2B64E0F3005A0ED8 /* Build configuration list for PBXProject "FlappyDragon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEBFFA202B64E0F5005A0ED8 /* Debug */,
+				CEBFFA212B64E0F5005A0ED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEBFFA222B64E0F5005A0ED8 /* Build configuration list for PBXNativeTarget "FlappyDragon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEBFFA232B64E0F5005A0ED8 /* Debug */,
+				CEBFFA242B64E0F5005A0ED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEBFFA252B64E0F5005A0ED8 /* Build configuration list for PBXNativeTarget "FlappyDragonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEBFFA262B64E0F5005A0ED8 /* Debug */,
+				CEBFFA272B64E0F5005A0ED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEBFFA062B64E0F3005A0ED8 /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CEBFF9F92B64E0F3005A0ED8 /* Project object */;
+}
