@@ -15,7 +15,9 @@ struct ContentView: View {
     @State private var showImmersiveSpace = false
     @State private var immersiveSpaceIsShown = false
     private let dragonScale:Float = 0.01
-    @State private var rotationAngle = 45
+    private let ballScale:Float = 0.0001
+    @State private var rotationAngle = 45.0
+    @State private var rotationIncrement = 45.0
     @State private var rotateBy:Double = 180.0
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
@@ -25,6 +27,9 @@ struct ContentView: View {
         RealityView { content in
             // Add the initial RealityKit content
             if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
+                // temporily make the ball 100th smaller
+                //TODO make this ball disappear
+                scene.scale = [ballScale,ballScale,ballScale]
                 content.add(scene)
             }
             // Add the dragon upon app load
@@ -42,7 +47,7 @@ struct ContentView: View {
             if let scene = content.entities.first {
                 let uniformScale: Float = enlarge ? 1.4 : 1.0
                 scene.transform.scale = [uniformScale, uniformScale, uniformScale]
-                debugPrint("scene enlarged")
+                debugPrint("scene enlarged toggle")
             }
             // if the dragon is clicked
 //            if let dragon = content.entities.first {
@@ -72,6 +77,9 @@ struct ContentView: View {
         }
         .gesture(TapGesture().targetedToAnyEntity().onEnded { _ in
             enlarge.toggle()
+            //rotate by 45 degrees + increment when tapped
+            rotationAngle = rotationAngle + rotationIncrement
+            rotateBy = Double(rotationAngle)
         })
         .gesture(DragGesture(minimumDistance: 0.0)
             .targetedToAnyEntity()
