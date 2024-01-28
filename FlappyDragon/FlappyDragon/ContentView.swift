@@ -37,30 +37,23 @@ struct ContentView: View {
             if let dragon = try? await Entity(named: "GGJ2024_Dragon"){
                 dragon.scale = [dragonScale,dragonScale,dragonScale]
 //                dragon.scale = [repeating:dragonScale]
-//                dragon.rotate = [rotationAngle,rotationAngle,rotationAngle] //ERROR
-                // rotate the dragon by ___ degree
-                //dragon.transform.rotate(self: CGContext, by: 45.0)//rotateAngle(Angle:45) //error
                 content.add(dragon)
                 debugPrint("GGJ2024_Dragon added")
             }
         } update: { content in
+            // move (translate) in y-axis
+            let yPosition: Float = jump ? 0.3 : 0.0
             // Update the RealityKit content when SwiftUI state changes
             if let scene = content.entities.first {
                 let uniformScale: Float = enlarge ? 1.4 : 1.0
                 scene.transform.scale = [uniformScale, uniformScale, uniformScale]
                 debugPrint("scene enlarged toggle")
-                // move (translate) in y-axis
-                let yPosition: Float = jump ? 0.3 : 0.0
                 scene.transform.translation = [0.0, yPosition, 0.0]
+                debugPrint("scene jumped")
             }
-            // if the dragon is clicked
-//            if let dragon = content.entities.first {
-//                let uniformScale: Float = enlarge ? 2.0 : 1.0
-//                dragon.transform.scale = [uniformScale, uniformScale, uniformScale]
-//                debugPrint("dragon enlarged")
-//            }
         }
         .rotation3DEffect(.radians(rotateBy), axis:.y)
+//        .translatedBy(x: 0.0, y: 3.0) //NOT WORK
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
                 if newValue {
@@ -108,3 +101,21 @@ struct ContentView: View {
 #Preview(windowStyle: .volumetric) {
     ContentView()
 }
+
+
+//JUNK CODE, DID NOT WORK
+//            let dragon = try? await Entity(named: "GGJ2024_Dragon")
+//                dragon?.transform.translation = [0.0, yPosition, 0.0]
+//                debugPrint("dragon jumped")
+
+//                dragon.rotate = [rotationAngle,rotationAngle,rotationAngle] //ERROR
+                // rotate the dragon by ___ degree
+                //dragon.transform.rotate(self: CGContext, by: 45.0)//rotateAngle(Angle:45) //error
+
+
+// if the dragon is clicked, TODO, DIDN'T WORK
+//            if let dragon = content.entities.first {
+//                let uniformScale: Float = enlarge ? 2.0 : 1.0
+//                dragon.transform.scale = [uniformScale, uniformScale, uniformScale]
+//                debugPrint("dragon enlarged")
+//            }
