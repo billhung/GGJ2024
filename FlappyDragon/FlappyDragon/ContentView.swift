@@ -18,7 +18,9 @@ struct ContentView: View {
     private let ballScale:Float = 0.1 //1.0 //size of the default sphere
     @State private var rotationAngle = 45.0
     @State private var rotationIncrement = 45.0
-    @State private var rotateBy:Double = 180.0
+    @State private var rotateByX:Double = 0.0
+    @State private var rotateByY:Double = 45.0
+    @State private var rotateByZ:Double = 90.0
     @State private var jump = false
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
@@ -51,8 +53,16 @@ struct ContentView: View {
                 scene.transform.translation = [0.0, yPosition, 0.0]
                 debugPrint("scene jumped")
             }
+            
+            // TODO Get the dragon and makes it jump (transform with translation on y-axis)
+//            let dragon = content.entities.index(<#T##i: Int##Int#>, offsetBy: <#T##Int#>)
+//                //            content.entities.first?.transform.translation = [0.0, yPosition, 0.0]
+//                dragon.transform.translation = [0.0, yPosition, 0.0]
+            
         }
-        .rotation3DEffect(.radians(rotateBy), axis:.y)
+        .rotation3DEffect(.radians(rotateByX), axis:.x) //rotate up on load
+        .rotation3DEffect(.radians(rotateByY), axis:.y) //rotate sideway on load
+        .rotation3DEffect(.radians(rotateByZ), axis:.z) //rotate up on load
 //        .translatedBy(x: 0.0, y: 3.0) //NOT WORK
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
@@ -76,7 +86,7 @@ struct ContentView: View {
             enlarge.toggle()
             //rotate by 45 degrees + increment when tapped
             rotationAngle = rotationAngle + rotationIncrement
-            rotateBy = Double(rotationAngle)
+            rotateByY = Double(rotationAngle)
         })
         .gesture(DragGesture(minimumDistance: 0.0)
             .targetedToAnyEntity()
@@ -84,14 +94,14 @@ struct ContentView: View {
                 let location3d = value.convert(value.location3D, from:.local, to:.scene)
                 let startLocation = value.convert(value.startLocation3D, from:.local, to:.scene)
                 let delta = location3d - startLocation
-                rotateBy = Double(atan(delta.x * 100))
+                rotateByY = Double(atan(delta.x * 100))
             })
         .toolbar {
             ToolbarItemGroup(placement: .bottomOrnament) {
                 VStack (spacing: 12) {
-                    Toggle("Enlarge RealityView Content", isOn: $enlarge)
-                    Toggle("Jump", isOn: $jump)
-                    Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
+                    //Toggle("Enlarge RealityView Content", isOn: $enlarge)
+                    Toggle("LAUGH", isOn: $jump)
+                    //Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
                 }
             }
         }
@@ -119,3 +129,6 @@ struct ContentView: View {
 //                dragon.transform.scale = [uniformScale, uniformScale, uniformScale]
 //                debugPrint("dragon enlarged")
 //            }
+
+//let dragon = content.entities.index(<#T##i: Int##Int#>, offsetBy: <#T##Int#>)
+//dragon.transform.translation = [0.0, yPosition, 0.0]
