@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var enlarge = false
     @State private var showImmersiveSpace = false
     @State private var immersiveSpaceIsShown = false
-    private let dragonScale:Float = 0.01
+    private let dragonScale:Float = 0.01 //default in meters
     private let ballScale:Float = 0.1 //1.0 //size of the default sphere
     @State private var rotationAngle = 45.0
     @State private var rotationIncrement = 45.0
@@ -34,11 +34,11 @@ struct ContentView: View {
                 content.add(scene)
             }
             // Add the dragon upon app load
-            if let dragon = try? await Entity(named: "GGJ2024_Dragon"){
+            if let dragon = try? await Entity(named: "GGJ2024_Dragon_Rigged_Yellow"){
                 dragon.scale = [dragonScale,dragonScale,dragonScale]
 //                dragon.scale = [repeating:dragonScale]
                 content.add(dragon)
-                debugPrint("GGJ2024_Dragon added")
+                debugPrint("GGJ2024_Dragon_Rigged_Yellow added")
             }
         } update: { content in
             // move (translate) in y-axis
