@@ -14,8 +14,9 @@ struct ContentView: View {
     @State private var enlarge = false
     @State private var showImmersiveSpace = false
     @State private var immersiveSpaceIsShown = false
-    private let dragonScale:Float = 0.001
+    private let dragonScale:Float = 0.01
     @State private var rotationAngle = 45
+    @State private var rotateBy:Double = 180.0
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
@@ -27,14 +28,14 @@ struct ContentView: View {
                 content.add(scene)
             }
             // Add the dragon upon app load
-            if let dragon = try? await Entity(named: "Low_Poly_Dragon"){
+            if let dragon = try? await Entity(named: "GGJ2024_Dragon"){
                 dragon.scale = [dragonScale,dragonScale,dragonScale]
 //                dragon.scale = [repeating:dragonScale]
 //                dragon.rotate = [rotationAngle,rotationAngle,rotationAngle] //ERROR
                 // rotate the dragon by ___ degree
                 //dragon.transform.rotate(self: CGContext, by: 45.0)//rotateAngle(Angle:45) //error
                 content.add(dragon)
-                debugPrint("Low_Poly_Dragon added")
+                debugPrint("GGJ2024_Dragon added")
             }
         } update: { content in
             // Update the RealityKit content when SwiftUI state changes
@@ -50,7 +51,7 @@ struct ContentView: View {
 //                debugPrint("dragon enlarged")
 //            }
         }
-        .rotation3DEffect(.degrees(45.0), axis:(x:0,y:1,z:0))
+        .rotation3DEffect(.radians(rotateBy), axis:.y)
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
                 if newValue {
@@ -72,6 +73,14 @@ struct ContentView: View {
         .gesture(TapGesture().targetedToAnyEntity().onEnded { _ in
             enlarge.toggle()
         })
+        .gesture(DragGesture(minimumDistance: 0.0)
+            .targetedToAnyEntity()
+            .onChanged { value in
+                let location3d = value.convert(value.location3D, from:.local, to:.scene)
+                let startLocation = value.convert(value.startLocation3D, from:.local, to:.scene)
+                let delta = location3d - startLocation
+                rotateBy = Double(atan(delta.x * 100))
+            })
         .toolbar {
             ToolbarItemGroup(placement: .bottomOrnament) {
                 VStack (spacing: 12) {

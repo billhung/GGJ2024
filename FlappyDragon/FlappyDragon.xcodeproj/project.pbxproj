@@ -17,6 +17,7 @@
 		CEBFFA142B64E0F5005A0ED8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBFFA132B64E0F5005A0ED8 /* Preview Assets.xcassets */; };
 		CEBFFA1F2B64E0F5005A0ED8 /* FlappyDragonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFFA1E2B64E0F5005A0ED8 /* FlappyDragonTests.swift */; };
 		CEBFFA2A2B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CEBFFA292B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz */; };
+		CEC1CDD62B66019100FF1867 /* GGJ2024_Dragon.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CEC1CDD52B66019100FF1867 /* GGJ2024_Dragon.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		CEBFFA1A2B64E0F5005A0ED8 /* FlappyDragonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyDragonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBFFA1E2B64E0F5005A0ED8 /* FlappyDragonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyDragonTests.swift; sourceTree = "<group>"; };
 		CEBFFA292B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Low_Poly_Dragon.usdz; sourceTree = "<group>"; };
+		CEC1CDD52B66019100FF1867 /* GGJ2024_Dragon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = GGJ2024_Dragon.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		CEBFFA282B64FBB5005A0ED8 /* Dragon */ = {
 			isa = PBXGroup;
 			children = (
+				CEC1CDD52B66019100FF1867 /* GGJ2024_Dragon.usdz */,
 				CEBC30522B6508CE00D3028F /* Red_dragon.usdz */,
 				CEBFFA292B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz */,
 			);
@@ -220,6 +223,7 @@
 				CEBFFA0F2B64E0F3005A0ED8 /* ImageBasedLighting.skybox in Resources */,
 				CEBFFA2A2B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz in Resources */,
 				CEBC30532B6508CE00D3028F /* Red_dragon.usdz in Resources */,
+				CEC1CDD62B66019100FF1867 /* GGJ2024_Dragon.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
