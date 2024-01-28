@@ -15,10 +15,11 @@ struct ContentView: View {
     @State private var showImmersiveSpace = false
     @State private var immersiveSpaceIsShown = false
     private let dragonScale:Float = 0.01
-    private let ballScale:Float = 0.0001
+    private let ballScale:Float = 0.1 //1.0 //size of the default sphere
     @State private var rotationAngle = 45.0
     @State private var rotationIncrement = 45.0
     @State private var rotateBy:Double = 180.0
+    @State private var jump = false
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
@@ -48,6 +49,9 @@ struct ContentView: View {
                 let uniformScale: Float = enlarge ? 1.4 : 1.0
                 scene.transform.scale = [uniformScale, uniformScale, uniformScale]
                 debugPrint("scene enlarged toggle")
+                // move (translate) in y-axis
+                let yPosition: Float = jump ? 0.3 : 0.0
+                scene.transform.translation = [0.0, yPosition, 0.0]
             }
             // if the dragon is clicked
 //            if let dragon = content.entities.first {
@@ -93,6 +97,7 @@ struct ContentView: View {
             ToolbarItemGroup(placement: .bottomOrnament) {
                 VStack (spacing: 12) {
                     Toggle("Enlarge RealityView Content", isOn: $enlarge)
+                    Toggle("Jump", isOn: $jump)
                     Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
                 }
             }
