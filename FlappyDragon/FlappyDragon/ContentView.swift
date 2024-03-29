@@ -97,10 +97,10 @@ struct ContentView: View {
                 rotateByY = Double(atan(delta.x * 100))
             })
         .toolbar {
-            ToolbarItemGroup(placement: .bottomOrnament) {
+            ToolbarItemGroup(placement: .bottomOrnament) { //TODO .bottomBar works but too small, .topBarTrailing didn't show
                 VStack (spacing: 12) {
                     //Toggle("Enlarge RealityView Content", isOn: $enlarge)
-                    Toggle("LAUGH", isOn: $jump)
+                    Toggle("MAKE ME(メ) LAUGH わらわせて", isOn: $jump)
                     //Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
                 }
             }
