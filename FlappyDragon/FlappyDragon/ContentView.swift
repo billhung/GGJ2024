@@ -36,7 +36,8 @@ struct ContentView: View {
                 content.add(scene)
             }
             // Add the dragon upon app load
-            if let dragon = try? await Entity(named: "GGJ2024_Dragon_Rigged_Yellow"){
+            if let dragon = try? await Entity(named: "Red_dragon"){
+            //if let dragon = try? await Entity(named: "GGJ2024_Dragon_Rigged_Yellow"){
                 dragon.scale = [dragonScale,dragonScale,dragonScale]
 //                dragon.scale = [repeating:dragonScale]
                 content.add(dragon)
