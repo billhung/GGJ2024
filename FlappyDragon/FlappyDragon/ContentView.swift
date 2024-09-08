@@ -19,8 +19,8 @@ struct ContentView: View {
     @State private var rotationAngle = 45.0
     @State private var rotationIncrement = 45.0
     @State private var rotateByX:Double = 0.0
-    @State private var rotateByY:Double = 45.0
-    @State private var rotateByZ:Double = 90.0
+    @State private var rotateByY:Double = 0.0
+    @State private var rotateByZ:Double = 0.0
     @State private var jump = false
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
@@ -30,16 +30,13 @@ struct ContentView: View {
         RealityView { content in
             // Add the initial RealityKit content
             if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
-                // temporily make the ball 100th smaller
                 //TODO make this ball disappear
                 scene.scale = [ballScale,ballScale,ballScale]
                 content.add(scene)
             }
             // Add the dragon upon app load
             if let dragon = try? await Entity(named: "Red_dragon"){
-            //if let dragon = try? await Entity(named: "GGJ2024_Dragon_Rigged_Yellow"){
                 dragon.scale = [dragonScale,dragonScale,dragonScale]
-//                dragon.scale = [repeating:dragonScale]
                 content.add(dragon)
                 debugPrint("GGJ2024_Dragon_Rigged_Yellow added")
             }
@@ -64,7 +61,7 @@ struct ContentView: View {
         .rotation3DEffect(.radians(rotateByX), axis:.x) //rotate up on load
         .rotation3DEffect(.radians(rotateByY), axis:.y) //rotate sideway on load
         .rotation3DEffect(.radians(rotateByZ), axis:.z) //rotate up on load
-//        .translatedBy(x: 0.0, y: 3.0) //NOT WORK
+
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
                 if newValue {
@@ -83,12 +80,14 @@ struct ContentView: View {
                 }
             }
         }
+        // GESTURE 1, TAP TO ROTATE BY 45 DEGREES
         .gesture(TapGesture().targetedToAnyEntity().onEnded { _ in
             enlarge.toggle()
             //rotate by 45 degrees + increment when tapped
             rotationAngle = rotationAngle + rotationIncrement
             rotateByY = Double(rotationAngle)
         })
+        // GESTURE 2, DRAG TO ROTATE SMOOTHLY
         .gesture(DragGesture(minimumDistance: 0.0)
             .targetedToAnyEntity()
             .onChanged { value in
@@ -97,7 +96,7 @@ struct ContentView: View {
                 let delta = location3d - startLocation
                 rotateByY = Double(atan(delta.x * 100))
             })
-        .toolbar {
+        .toolbar { // UI Elements
             ToolbarItemGroup(placement: .bottomOrnament) { //TODO .bottomBar works but too small, .topBarTrailing didn't show
                 VStack (spacing: 12) {
                     //Toggle("Enlarge RealityView Content", isOn: $enlarge)
@@ -112,24 +111,3 @@ struct ContentView: View {
 #Preview(windowStyle: .volumetric) {
     ContentView()
 }
-
-
-//JUNK CODE, DID NOT WORK
-//            let dragon = try? await Entity(named: "GGJ2024_Dragon")
-//                dragon?.transform.translation = [0.0, yPosition, 0.0]
-//                debugPrint("dragon jumped")
-
-//                dragon.rotate = [rotationAngle,rotationAngle,rotationAngle] //ERROR
-                // rotate the dragon by ___ degree
-                //dragon.transform.rotate(self: CGContext, by: 45.0)//rotateAngle(Angle:45) //error
-
-
-// if the dragon is clicked, TODO, DIDN'T WORK
-//            if let dragon = content.entities.first {
-//                let uniformScale: Float = enlarge ? 2.0 : 1.0
-//                dragon.transform.scale = [uniformScale, uniformScale, uniformScale]
-//                debugPrint("dragon enlarged")
-//            }
-
-//let dragon = content.entities.index(<#T##i: Int##Int#>, offsetBy: <#T##Int#>)
-//dragon.transform.translation = [0.0, yPosition, 0.0]
