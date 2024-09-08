@@ -11,17 +11,18 @@ import RealityKitContent
 
 struct ContentView: View {
 
-    @State private var enlarge = false
-    @State private var showImmersiveSpace = false
-    @State private var immersiveSpaceIsShown = false
+    @State private var enlarge = false //test code to make a sphere bigger
+    @State private var showImmersiveSpace = false //immersive space or stay in AR, default false
+    @State private var immersiveSpaceIsShown = false //immersive space or stay in AR, default false
     private let dragonScale:Float = 0.01 //default in meters
     private let ballScale:Float = 0.1 //1.0 //size of the default sphere
-    @State private var rotationAngle = 45.0
-    @State private var rotationIncrement = 45.0
-    @State private var rotateByX:Double = 0.0
-    @State private var rotateByY:Double = 0.0
-    @State private var rotateByZ:Double = 0.0
-    @State private var jump = false
+    @State private var rotationAngle = 45.0 //initial rotation(angle) of the dragon when loaded
+    @State private var rotationIncrement = 45.0 //rotation degree when clicked
+    @State private var rotateByX:Double = 0.0 //initial rotation(x-axis) of the dragon when loaded
+    @State private var rotateByY:Double = 0.0 //initial rotation(y-axis) of the dragon when loaded
+    @State private var rotateByZ:Double = 0.0 //initial rotation(z-axis) of the dragon when loaded
+    @State private var jump = false //the jump button to make dragon jumps
+    @State private var dragon: Entity?
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
@@ -35,15 +36,16 @@ struct ContentView: View {
                 content.add(scene)
             }
             // Add the dragon upon app load
-            if let dragon = try? await Entity(named: "Red_dragon"){
-                dragon.scale = [dragonScale,dragonScale,dragonScale]
-                content.add(dragon)
+            if let dragonEntity = try? await Entity(named: "Red_dragon"){
+                dragonEntity.scale = [dragonScale,dragonScale,dragonScale]
+                content.add(dragonEntity)
                 debugPrint("GGJ2024_Dragon_Rigged_Yellow added")
+                dragon = dragonEntity // Store the dragon entity to state variable (global static)
             }
         } update: { content in
             // move (translate) in y-axis
             let yPosition: Float = jump ? 0.3 : 0.0
-            // Update the RealityKit content when SwiftUI state changes
+            // Update the RealityKit content (the sphere) when SwiftUI state changes
             if let scene = content.entities.first {
                 let uniformScale: Float = enlarge ? 1.4 : 1.0
                 scene.transform.scale = [uniformScale, uniformScale, uniformScale]
@@ -52,11 +54,8 @@ struct ContentView: View {
                 debugPrint("scene jumped")
             }
             
-            // TODO Get the dragon and makes it jump (transform with translation on y-axis)
-//            let dragon = content.entities.index(<#T##i: Int##Int#>, offsetBy: <#T##Int#>)
-//                //            content.entities.first?.transform.translation = [0.0, yPosition, 0.0]
-//                dragon.transform.translation = [0.0, yPosition, 0.0]
-            
+            // Update the dragon's position, and makes it jump (transform with translation on y-axis)
+            dragon?.position.y = yPosition
         }
         .rotation3DEffect(.radians(rotateByX), axis:.x) //rotate up on load
         .rotation3DEffect(.radians(rotateByY), axis:.y) //rotate sideway on load
@@ -97,11 +96,9 @@ struct ContentView: View {
                 rotateByY = Double(atan(delta.x * 100))
             })
         .toolbar { // UI Elements
-            ToolbarItemGroup(placement: .bottomOrnament) { //TODO .bottomBar works but too small, .topBarTrailing didn't show
+            ToolbarItemGroup(placement: .bottomOrnament) {
                 VStack (spacing: 12) {
-                    //Toggle("Enlarge RealityView Content", isOn: $enlarge)
                     Toggle("MAKE ME(メ) LAUGH わらわせて", isOn: $jump)
-                    //Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
                 }
             }
         }
