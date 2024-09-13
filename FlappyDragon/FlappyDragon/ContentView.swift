@@ -22,6 +22,8 @@ struct ContentView: View {
     @State private var rotateByY:Double = 0.0 //initial rotation(y-axis) of the dragon when loaded
     @State private var rotateByZ:Double = 0.0 //initial rotation(z-axis) of the dragon when loaded
     @State private var jump = false //the jump button to make dragon jumps
+    @State private var lowHeight:Float = -0.3
+    @State private var highHeight:Float = 0.0
     @State private var dragon: Entity?
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
@@ -38,7 +40,7 @@ struct ContentView: View {
             }
         } update: { content in
             // move (translate) in y-axis
-            let yPosition: Float = jump ? 0.3 : 0.0
+            let yPosition: Float = jump ? highHeight : lowHeight
             // Update the RealityKit content (the sphere) when SwiftUI state changes
             if let scene = content.entities.first {
                 scene.transform.translation = [0.0, yPosition, 0.0]
