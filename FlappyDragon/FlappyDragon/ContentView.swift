@@ -47,9 +47,6 @@ struct ContentView: View {
             let yPosition: Float = jump ? 0.3 : 0.0
             // Update the RealityKit content (the sphere) when SwiftUI state changes
             if let scene = content.entities.first {
-                let uniformScale: Float = enlarge ? 1.4 : 1.0
-                scene.transform.scale = [uniformScale, uniformScale, uniformScale]
-                debugPrint("scene enlarged toggle")
                 scene.transform.translation = [0.0, yPosition, 0.0]
                 debugPrint("scene jumped")
             }
