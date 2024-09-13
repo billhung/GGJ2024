@@ -29,12 +29,6 @@ struct ContentView: View {
     
     var body: some View {
         RealityView { content in
-            // Add the initial RealityKit content
-            if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
-                //TODO make this ball disappear
-                scene.scale = [ballScale,ballScale,ballScale]
-                content.add(scene)
-            }
             // Add the dragon upon app load
             if let dragonEntity = try? await Entity(named: "Red_dragon"){
                 dragonEntity.scale = [dragonScale,dragonScale,dragonScale]
