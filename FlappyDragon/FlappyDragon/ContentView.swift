@@ -57,9 +57,9 @@ struct ContentView: View {
             // Update the dragon's position, and makes it jump (transform with translation on y-axis)
             dragon?.position.y = yPosition
         }
-        .rotation3DEffect(.radians(rotateByX), axis:.x) //rotate up on load
-        .rotation3DEffect(.radians(rotateByY), axis:.y) //rotate sideway on load
-        .rotation3DEffect(.radians(rotateByZ), axis:.z) //rotate around Z on load
+        .rotation3DEffect(.radians(rotateByX), axis: (x: 1.0, y: 0.0, z: 0.0))
+        .rotation3DEffect(.radians(rotateByY), axis: (x: 0.0, y: 1.0, z: 0.0))
+        .rotation3DEffect(.radians(rotateByZ), axis: (x: 0.0, y: 0.0, z: 1.0))
 
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
