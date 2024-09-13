@@ -59,7 +59,7 @@ struct ContentView: View {
         }
         .rotation3DEffect(.radians(rotateByX), axis:.x) //rotate up on load
         .rotation3DEffect(.radians(rotateByY), axis:.y) //rotate sideway on load
-        .rotation3DEffect(.radians(rotateByZ), axis:.z) //rotate up on load
+        .rotation3DEffect(.radians(rotateByZ), axis:.z) //rotate around Z on load
 
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
