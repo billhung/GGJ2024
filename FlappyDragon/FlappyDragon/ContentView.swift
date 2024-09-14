@@ -80,15 +80,6 @@ struct ContentView: View {
             rotationAngle = rotationAngle + rotationIncrement
             rotateByY = Double(rotationAngle)
         })
-        // GESTURE 2, DRAG TO ROTATE SMOOTHLY
-        .gesture(DragGesture(minimumDistance: 0.0)
-            .targetedToAnyEntity()
-            .onChanged { value in
-                let location3d = value.convert(value.location3D, from:.local, to:.scene)
-                let startLocation = value.convert(value.startLocation3D, from:.local, to:.scene)
-                let delta = location3d - startLocation
-                rotateByY = Double(atan(delta.x * 100))
-            })
         .toolbar { // UI Elements
             ToolbarItemGroup(placement: .bottomOrnament) {
                 VStack (spacing: 12) {
