@@ -83,7 +83,7 @@ struct ContentView: View {
         .toolbar { // UI Elements
             ToolbarItemGroup(placement: .bottomOrnament) {
                 VStack (spacing: 12) {
-                    Toggle("MAKE ME(メ) LAUGH わらわせて", isOn: $jump)
+                    Toggle("BUTTON:PUSH ME", isOn: $jump)
                 }
             }
         }
