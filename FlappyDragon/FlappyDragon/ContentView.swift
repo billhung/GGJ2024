@@ -39,7 +39,7 @@ struct ContentView: View {
                 dragon = dragonEntity // Store the dragon entity to state variable (global static)
             }
         } update: { content in
-            // move (translate) in y-axis
+            // Move (translate) in y-axis
             let yPosition: Float = jump ? highHeight : lowHeight
             // Update the RealityKit content (the sphere) when SwiftUI state changes
             if let scene = content.entities.first {
@@ -50,6 +50,7 @@ struct ContentView: View {
             // Update the dragon's position, and makes it jump (transform with translation on y-axis)
             dragon?.position.y = yPosition
         }
+        // Initial rotation at load for the whole scene
         .rotation3DEffect(.radians(rotateByX), axis: (x: 1.0, y: 0.0, z: 0.0))
         .rotation3DEffect(.radians(rotateByY), axis: (x: 0.0, y: 1.0, z: 0.0))
         .rotation3DEffect(.radians(rotateByZ), axis: (x: 0.0, y: 0.0, z: 1.0))
