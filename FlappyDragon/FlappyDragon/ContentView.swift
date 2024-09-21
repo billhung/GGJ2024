@@ -35,7 +35,7 @@ struct ContentView: View {
             if let dragonEntity = try? await Entity(named: "Red_dragon"){
                 dragonEntity.scale = [dragonScale,dragonScale,dragonScale]
                 content.add(dragonEntity)
-                debugPrint("GGJ2024_Dragon_Rigged_Yellow added")
+                debugPrint("Red_dragon added")
                 dragon = dragonEntity // Store the dragon entity to state variable (global static)
             }
         } update: { content in
