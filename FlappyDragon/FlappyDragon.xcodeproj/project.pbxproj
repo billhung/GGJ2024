@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CEBC30522B6508CE00D3028F /* Red_dragon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Red_dragon.usdz; sourceTree = "<group>"; };
+		CEBC30522B6508CE00D3028F /* Red_dragon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Red_dragon.usdz; sourceTree = "<group>"; };
 		CEBFFA012B64E0F3005A0ED8 /* FlappyDragon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyDragon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBFFA052B64E0F3005A0ED8 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		CEBFFA082B64E0F3005A0ED8 /* FlappyDragonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyDragonApp.swift; sourceTree = "<group>"; };
@@ -46,12 +46,16 @@
 		CEBFFA152B64E0F5005A0ED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEBFFA1A2B64E0F5005A0ED8 /* FlappyDragonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyDragonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBFFA1E2B64E0F5005A0ED8 /* FlappyDragonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyDragonTests.swift; sourceTree = "<group>"; };
-		CEBFFA292B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Low_Poly_Dragon.usdz; sourceTree = "<group>"; };
-		CEC1CDD52B66019100FF1867 /* GGJ2024_Dragon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = GGJ2024_Dragon.usdz; sourceTree = "<group>"; };
-		CEC1CDD72B66161D00FF1867 /* GGJ2024_Dragon_Rigged.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = GGJ2024_Dragon_Rigged.usdz; sourceTree = "<group>"; };
-		CEC1CDD92B661D1600FF1867 /* GGJ2024_Dragon_Rigged_Pink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = GGJ2024_Dragon_Rigged_Pink.usdz; sourceTree = "<group>"; };
-		CEC1CDDB2B6620D500FF1867 /* GGJ2024_Dragon_Rigged_Yellow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = GGJ2024_Dragon_Rigged_Yellow.usdz; sourceTree = "<group>"; };
+		CEBFFA292B64FBDF005A0ED8 /* Low_Poly_Dragon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Low_Poly_Dragon.usdz; sourceTree = "<group>"; };
+		CEC1CDD52B66019100FF1867 /* GGJ2024_Dragon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = GGJ2024_Dragon.usdz; sourceTree = "<group>"; };
+		CEC1CDD72B66161D00FF1867 /* GGJ2024_Dragon_Rigged.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = GGJ2024_Dragon_Rigged.usdz; sourceTree = "<group>"; };
+		CEC1CDD92B661D1600FF1867 /* GGJ2024_Dragon_Rigged_Pink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = GGJ2024_Dragon_Rigged_Pink.usdz; sourceTree = "<group>"; };
+		CEC1CDDB2B6620D500FF1867 /* GGJ2024_Dragon_Rigged_Yellow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = GGJ2024_Dragon_Rigged_Yellow.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CE1AF59D2C9EE270002A1973 /* Bamboo */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Bamboo; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CEBFF9FE2B64E0F3005A0ED8 /* Frameworks */ = {
@@ -100,6 +104,7 @@
 				CEBFFA0E2B64E0F3005A0ED8 /* ImageBasedLighting.skybox */,
 				CEBFFA102B64E0F5005A0ED8 /* Assets.xcassets */,
 				CEBFFA282B64FBB5005A0ED8 /* Dragon */,
+				CE1AF59D2C9EE270002A1973 /* Bamboo */,
 				CEBFFA152B64E0F5005A0ED8 /* Info.plist */,
 				CEBFFA122B64E0F5005A0ED8 /* Preview Content */,
 			);
@@ -157,6 +162,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CE1AF59D2C9EE270002A1973 /* Bamboo */,
 			);
 			name = FlappyDragon;
 			packageProductDependencies = (
