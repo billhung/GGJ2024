@@ -38,6 +38,11 @@ struct ContentView: View {
                 debugPrint("Red_dragon added")
                 dragon = dragonEntity // Store the dragon entity to state variable (global static)
             }
+            // Add the bamboo upon app load
+            if let bambooEntity = try? await Entity(named: "Bamboo"){
+                content.add(bambooEntity)
+                debugPrint("Bamboo added")
+            }
         } update: { content in
             // Move (translate) in y-axis
             let yPosition: Float = jump ? highHeight : lowHeight
