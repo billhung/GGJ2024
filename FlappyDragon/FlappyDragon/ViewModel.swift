@@ -14,4 +14,6 @@ import RealityKitContent
 @Observable
 final class ViewModel {
     
+    var dragonEntity: Entity? = nil
+    
 }

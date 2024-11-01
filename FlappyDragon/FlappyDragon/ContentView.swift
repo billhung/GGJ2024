@@ -10,7 +10,8 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-
+    var viewModel: ViewModel //app model
+    
     @State private var enlarge = false //test code to make a sphere bigger
     @State private var showImmersiveSpace = false //immersive space or stay in AR, default false
     @State private var immersiveSpaceIsShown = false //immersive space or stay in AR, default false
@@ -30,13 +31,15 @@ struct ContentView: View {
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
     
     var body: some View {
+        @Bindable var viewModel = viewModel
+        
         RealityView { content in
             // Add the dragon upon app load
+            //TODO should use viewModel.dragonEntity
             if let dragonEntity = try? await Entity(named: "Red_dragon"){
-                dragonEntity.scale = [dragonScale,dragonScale,dragonScale]
+                viewModel.dragonEntity?.scale = [dragonScale,dragonScale,dragonScale]
                 content.add(dragonEntity)
                 debugPrint("Red_dragon added")
-                dragon = dragonEntity // Store the dragon entity to state variable (global static)
             }
             // Add the bamboo upon app load
             if let bambooEntity = try? await Entity(named: "Bamboo"){
@@ -96,5 +99,5 @@ struct ContentView: View {
 }
 
 #Preview(windowStyle: .volumetric) {
-    ContentView()
+    ContentView(viewModel: ViewModel())
 }
