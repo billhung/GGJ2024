@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE15DB212CA00EAE000420E3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15DB202CA00EAE000420E3 /* ViewModel.swift */; };
 		CEBC30532B6508CE00D3028F /* Red_dragon.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CEBC30522B6508CE00D3028F /* Red_dragon.usdz */; };
 		CEBFFA072B64E0F3005A0ED8 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = CEBFFA062B64E0F3005A0ED8 /* RealityKitContent */; };
 		CEBFFA092B64E0F3005A0ED8 /* FlappyDragonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFFA082B64E0F3005A0ED8 /* FlappyDragonApp.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE15DB202CA00EAE000420E3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CEBC30522B6508CE00D3028F /* Red_dragon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Red_dragon.usdz; sourceTree = "<group>"; };
 		CEBFFA012B64E0F3005A0ED8 /* FlappyDragon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyDragon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBFFA052B64E0F3005A0ED8 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				CEBFFA082B64E0F3005A0ED8 /* FlappyDragonApp.swift */,
 				CEBFFA0A2B64E0F3005A0ED8 /* ContentView.swift */,
+				CE15DB202CA00EAE000420E3 /* ViewModel.swift */,
 				CEBFFA0C2B64E0F3005A0ED8 /* ImmersiveView.swift */,
 				CEBFFA0E2B64E0F3005A0ED8 /* ImageBasedLighting.skybox */,
 				CEBFFA102B64E0F5005A0ED8 /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			files = (
 				CEBFFA0B2B64E0F3005A0ED8 /* ContentView.swift in Sources */,
 				CEBFFA092B64E0F3005A0ED8 /* FlappyDragonApp.swift in Sources */,
+				CE15DB212CA00EAE000420E3 /* ViewModel.swift in Sources */,
 				CEBFFA0D2B64E0F3005A0ED8 /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
